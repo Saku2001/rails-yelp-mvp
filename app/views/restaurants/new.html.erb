@@ -1,0 +1,10 @@
+<div class="container mt-5">
+
+<h1>New Restaurant</h1>
+<%= simple_form_for @restaurant do |r| %>
+  <%= r.input :name %>
+  <%= r.input :address %>
+  <%= r.input :phone_number %>
+  <%= r.submit "ADD", class: "btn btn-primary" %>
+<% end %>
+</div>

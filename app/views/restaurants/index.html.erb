@@ -1,0 +1,21 @@
+<div class="container mt-5">
+
+<h1>All the Restaurants</h1>
+  <ul id="restaurants" style="list-style: none;">
+    <% @restaurants.each do |restaurant| %>
+
+      <li>
+        <i class="fa-solid fa-utensils"></i>
+        <%=  restaurant.name %>
+        <%= link_to "see details", restaurant_path(restaurant.id) %>
+
+        <% end %>
+
+      </li>
+  </ul>
+
+  <%= link_to new_restaurant_path do %>
+    <i class="fa-solid fa-plus"></i> Add a new Restaurant
+  <% end %>
+
+</div>
